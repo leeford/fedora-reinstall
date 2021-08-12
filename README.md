@@ -2,6 +2,19 @@
 
 * Restore via Borgbase where required
 
+* Post-install tasks
+```
+sudo hostnamectl set-hostname lford-fedora
+sudo dnf upgrade --refresh
+sudo dnf check
+sudo dnf autoremove
+sudo fwupdmgr get-devices
+sudo fwupdmgr refresh --force
+sudo fwupdmgr get-updates
+sudo fwupdmgr update
+sudo reboot now
+```
+
 * Install flatpaks
 ```
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
@@ -23,8 +36,11 @@ flatpak install flathub com.obsproject.Studio
 flatpak install flathub org.gnome.Extensions
 ```
 
-* Add RPM repos
+* Configure RPM
 ```
+echo 'fastestmirror=1' | sudo tee -a /etc/dnf/dnf.conf
+echo 'max_parallel_downloads=10' | sudo tee -a /etc/dnf/dnf.conf
+echo 'deltarpm=true' | sudo tee -a /etc/dnf/dnf.conf
 sudo dnf copr enable dawid/better_fonts -y
 sudo dnf -y install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
