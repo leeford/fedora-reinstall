@@ -71,7 +71,7 @@ sudo dnf -y install powershell
 sudo dnf -y install goverlay
 sudo dnf -y install mangohud
 sudo dnf -y install gamemode
-sudo dnf -y install zsh
+sudo dnf -y install fish util-linux-user
 sudo dnf -y remove gnome-tour
 ```
 
@@ -83,8 +83,7 @@ sudo dnf -y remove gnome-tour
 wget -qO- https://git.io/papirus-icon-theme-install | DESTDIR="$HOME/.icons" sh
 ```
 
-# ZSH
-Manually copy over .zshrc from this repo to local machine
+# Shell
 ```
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
