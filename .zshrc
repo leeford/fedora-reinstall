@@ -13,11 +13,8 @@ SPACESHIP_PROMPT_ORDER=(
   git           # Git section (git_branch + git_status)
   package       # Package version
   node          # Node.js section
-  dotnet        # .NET section
-  ruby          # Ruby section
   exec_time     # Execution time
   line_sep      # Line break
-  #battery       # Battery level and status
   time
   jobs          # Background jobs indicator
   exit_code     # Exit code section
@@ -34,7 +31,7 @@ export NVM_DIR="$HOME/.nvm"
 #source /etc/bash_completion.d/azure-cli
 
 # oh-my-zsh plugins
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(dnf git zsh-autosuggestions zsh-syntax-highlighting)
 
 # begin m365_comp completion
 #. <(m365_comp --completion)
