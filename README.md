@@ -85,7 +85,8 @@ sudo dnf -y remove gnome-tour
 ```
 
 # Gnome Extensions
-
+Install the following extensions:
+![image](https://user-images.githubusercontent.com/472320/129206525-a6c3369d-06f8-44ed-afba-5b2d36682934.png)
 
 # Theming
 ```
