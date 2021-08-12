@@ -76,12 +76,12 @@ sudo dnf -y install dnf-plugins-core
 sudo dnf -y install cabextract xorg-x11-font-utils fontconfig
 sudo dnf -y install vlc
 sudo dnf -y install powerline-fonts
-sudo dnf groupupdate sound-and-video
+sudo dnf -y groupupdate sound-and-video
 sudo dnf -y install libdvdcss
 sudo dnf -y install gstreamer1-plugins-{bad-\*,good-\*,ugly-\*,base} gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel ffmpeg gstreamer-ffmpeg 
 sudo dnf -y install lame\* --exclude=lame-devel
-sudo dnf group upgrade --with-optional Multimedia
-sudo dnf config-manager --set-enabled fedora-cisco-openh264
+sudo dnf -y group upgrade --with-optional Multimedia
+sudo dnf -y config-manager --set-enabled fedora-cisco-openh264
 sudo dnf -y install gstreamer1-plugin-openh264 mozilla-openh264
 sudo dnf -y remove gnome-tour
 ```
