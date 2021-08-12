@@ -113,3 +113,6 @@ omf install bobthefish
 4. Mount the backups and restore what you need
 5. Create a new repository for the new machine
 6. After a while delete old machine repository
+
+# Misc
+* Install `Hack` as part of https://github.com/powerline/fonts
