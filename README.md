@@ -17,21 +17,21 @@ sudo reboot now
 # Flatpak
 ```
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-flatpak install flathub com.spotify.Client
-flatpak install com.borgbase.Vorta
-flatpak install com.discordapp.Discord
-flatpak install com.getpostman.Postman
-flatpak install com.leinardi.gst
-flatpak install de.haeckerfelix.Shortwave
-flatpak install net.cozic.joplin_desktop
-flatpak install org.gimp.GIMP
-flatpak install org.gtk.Gtk3theme.Adwaita-dark
-flatpak install org.inkscape.Inkscape
-flatpak install org.signal.Signal
-flatpak install org.telegram.desktop
-flatpak install org.wireshark.Wireshark
-flatpak install flathub com.obsproject.Studio
-flatpak install flathub org.gnome.Extensions
+flatpak install flathub com.spotify.Client -y
+flatpak install com.borgbase.Vorta -y
+flatpak install com.discordapp.Discord -y
+flatpak install com.getpostman.Postman -y
+flatpak install com.leinardi.gst -y
+flatpak install de.haeckerfelix.Shortwave -y
+flatpak install net.cozic.joplin_desktop -y
+flatpak install org.gimp.GIMP -y
+flatpak install org.gtk.Gtk3theme.Adwaita-dark -y
+flatpak install org.inkscape.Inkscape -y
+flatpak install org.signal.Signal -y
+flatpak install org.telegram.desktop -y
+flatpak install org.wireshark.Wireshark -y
+flatpak install flathub com.obsproject.Studio -y
+flatpak install flathub org.gnome.Extensions -y
 ```
 
 # Configure RPM
