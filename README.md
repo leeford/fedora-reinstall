@@ -27,7 +27,6 @@ flatpak install net.cozic.joplin_desktop
 flatpak install org.gimp.GIMP
 flatpak install org.gtk.Gtk3theme.Adwaita-dark
 flatpak install org.inkscape.Inkscape
-flatpak install org.libreoffice.LibreOffice
 flatpak install org.signal.Signal
 flatpak install org.telegram.desktop
 flatpak install org.wireshark.Wireshark
