@@ -116,3 +116,4 @@ omf install bobthefish
 
 # Misc
 * Install `Hack` as part of https://github.com/powerline/fonts
+* Install `AppImageLauncher` rpm https://github.com/TheAssassin/AppImageLauncher/releases/
