@@ -19,6 +19,8 @@ flatpak install org.libreoffice.LibreOffice
 flatpak install org.signal.Signal
 flatpak install org.telegram.desktop
 flatpak install org.wireshark.Wireshark
+flatpak install flathub com.obsproject.Studio
+flatpak install flathub org.gnome.Extensions
 ```
 
 * Add RPM repos
@@ -33,6 +35,7 @@ sudo sh -c 'echo -e "[1password]\nname=1password\nbaseurl=https://downloads.1pas
 sudo sh -c 'echo -e "[gh-cli]\nname=gh-cli\nbaseurl=https://cli.github.com/packages/rpm\nenabled=1\ngpgcheck=1\ngpgkey=http://keyserver.ubuntu.com/pks/lookup?op=get&search=0xc99b11deb97541f0" > /etc/yum.repos.d/gh-cli.repo'
 sudo sh -c 'echo -e "[insync]\nname=insync\nbaseurl=http://yum.insync.io/fedora/\$releasever/\nenabled=1\ngpgcheck=1\ngpgkey=https://d2t3ff60b2tol4.cloudfront.net/repomd.xml.key" > /etc/yum.repos.d/insync.repo'
 sudo sh -c 'echo -e "[microsoft-edge-dev]\nname=azure-cli\nbaseurl=https://packages.microsoft.com/yumrepos/edge/\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/microsoft-edge-dev.repo'
+sudo sh -c 'echo -e "[packages-microsoft-com-prod]\nname=packages-microsoft-com-prod\nbaseurl=https://packages.microsoft.com/rhel/8/prod/\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/microsoft-rhel8.repo'
 ```
 
 * Install packages
@@ -49,4 +52,17 @@ sudo dnf -y install microsoft-edge-dev
 sudo dnf -y install compat-openssl10
 sudo dnf -y install pwsh
 sudo dnf -y install steam
+sudo dnf -y install powershell
+sudo dnf -y install goverlay
+sudo dnf -y install mangohud
+sudo dnf -y install gamemode
+sudo dnf -y remove gnome-tour
+```
+
+* Gnome extensions
+
+
+* Gnome Theming
+```
+wget -qO- https://git.io/papirus-icon-theme-install | DESTDIR="$HOME/.icons" sh
 ```
