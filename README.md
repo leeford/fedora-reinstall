@@ -4,7 +4,7 @@
 # Post-install Tasks
 ```
 sudo hostnamectl set-hostname lford-fedora
-sudo dnf upgrade --refresh
+sudo dnf -y upgrade --refresh
 sudo dnf check
 sudo dnf autoremove
 sudo fwupdmgr get-devices
