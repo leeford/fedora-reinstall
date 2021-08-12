@@ -1,8 +1,6 @@
 # fedora-reinstall
 
-* Use Flatpak where possible (except Steam and Firefox)
-
-* Restore via Borgbase where required [borgbase.json](:/51b87e42bcaa4143954af53622fbc9d2)
+* Restore via Borgbase where required
 
 * Install flatpaks
 ```
