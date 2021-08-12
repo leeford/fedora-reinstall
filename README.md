@@ -102,3 +102,8 @@ set -Ua fish_user_paths /home/$USER/.local/bin
 curl -L https://get.oh-my.fish | fish
 omf install bobthefish
 ```
+
+# Backups
+1. Open Vorta
+2. Import the `borgbase.json` profile from this repo which includes the repo config
+3. Either generate a new key pair and add to repo in borgbase or use existing (see 1password)
