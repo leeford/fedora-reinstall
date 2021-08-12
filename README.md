@@ -62,8 +62,6 @@ sudo dnf -y install gh
 sudo dnf -y install 1password
 sudo dnf -y install insync
 sudo dnf -y install microsoft-edge-dev
-sudo dnf -y install compat-openssl10
-sudo dnf -y install pwsh
 sudo dnf -y install steam
 sudo dnf -y install powershell
 sudo dnf -y install goverlay
