@@ -1,7 +1,7 @@
 # fedora-reinstall
 
 
-# Post-install tasks
+# Post-install Tasks
 ```
 sudo hostnamectl set-hostname lford-fedora
 sudo dnf upgrade --refresh
