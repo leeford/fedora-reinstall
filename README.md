@@ -25,7 +25,6 @@ flatpak install com.leinardi.gst -y
 flatpak install de.haeckerfelix.Shortwave -y
 flatpak install net.cozic.joplin_desktop -y
 flatpak install org.gimp.GIMP -y
-flatpak install org.gtk.Gtk3theme.Adwaita-dark -y
 flatpak install org.inkscape.Inkscape -y
 flatpak install org.signal.Signal -y
 flatpak install org.telegram.desktop -y
