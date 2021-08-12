@@ -72,19 +72,37 @@ sudo dnf -y install goverlay
 sudo dnf -y install mangohud
 sudo dnf -y install gamemode
 sudo dnf -y install fish util-linux-user
+sudo dnf -y install gnome-shell-extension-appindicator
+sudo dnf -y install rpmfusion-free-release-tainted
+sudo dnf -y install dnf-plugins-core
+sudo dnf -y install cabextract xorg-x11-font-utils fontconfig
+sudo dnf -y install vlc
+sudo dnf -y install powerline-fonts
+sudo dnf groupupdate sound-and-video
+sudo dnf -y install libdvdcss
+sudo dnf -y install gstreamer1-plugins-{bad-\*,good-\*,ugly-\*,base} gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel ffmpeg gstreamer-ffmpeg 
+sudo dnf -y install lame\* --exclude=lame-devel
+sudo dnf group upgrade --with-optional Multimedia
+sudo dnf config-manager --set-enabled fedora-cisco-openh264
+sudo dnf -y install gstreamer1-plugin-openh264 mozilla-openh264
 sudo dnf -y remove gnome-tour
 ```
 
 # Gnome Extensions
 
 
-# Gnome Theming
+# Theming
 ```
 wget -qO- https://git.io/papirus-icon-theme-install | DESTDIR="$HOME/.icons" sh
+sudo rpm -i https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm
 ```
 
 # Shell
+Set Fish to default shell and amend PATH to include ~/.local/bin
 ```
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
+chsh -s /usr/bin/fish
+mkdir -p /home/$USER/.local/bin
+set -Ua fish_user_paths /home/$USER/.local/bin
+curl -L https://get.oh-my.fish | fish
+omf install bobthefish
 ```
