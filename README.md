@@ -1,8 +1,7 @@
 # fedora-reinstall
 
-* Restore via Borgbase where required
 
-* Post-install tasks
+# Post-install tasks
 ```
 sudo hostnamectl set-hostname lford-fedora
 sudo dnf upgrade --refresh
@@ -15,7 +14,7 @@ sudo fwupdmgr update
 sudo reboot now
 ```
 
-* Install flatpaks
+# Flatpak
 ```
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak install flathub com.spotify.Client
@@ -36,7 +35,7 @@ flatpak install flathub com.obsproject.Studio
 flatpak install flathub org.gnome.Extensions
 ```
 
-* Configure RPM
+# Configure RPM
 ```
 echo 'fastestmirror=1' | sudo tee -a /etc/dnf/dnf.conf
 echo 'max_parallel_downloads=10' | sudo tee -a /etc/dnf/dnf.conf
@@ -54,7 +53,7 @@ sudo sh -c 'echo -e "[microsoft-edge-dev]\nname=azure-cli\nbaseurl=https://packa
 sudo sh -c 'echo -e "[packages-microsoft-com-prod]\nname=packages-microsoft-com-prod\nbaseurl=https://packages.microsoft.com/rhel/8/prod/\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/microsoft-rhel8.repo'
 ```
 
-* Install packages
+# Packages
 ```
 sudo dnf -y install fontconfig-font-replacements
 sudo dnf -y install gnome-tweaks
@@ -72,13 +71,21 @@ sudo dnf -y install powershell
 sudo dnf -y install goverlay
 sudo dnf -y install mangohud
 sudo dnf -y install gamemode
+sudo dnf -y install zsh
 sudo dnf -y remove gnome-tour
 ```
 
-* Gnome extensions
+# Gnome Extensions
 
 
-* Gnome Theming
+# Gnome Theming
 ```
 wget -qO- https://git.io/papirus-icon-theme-install | DESTDIR="$HOME/.icons" sh
+```
+
+# ZSH
+Manually copy over .zshrc from this repo to local machine
+```
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 ```
