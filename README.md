@@ -126,3 +126,8 @@ omf install nvm
   xrandr --output DisplayPort-3 --set TearFree on
   xrandr --output DisplayPort-4 --set TearFree on
   ```
+* Install NPM Packages
+  ```
+  npm install -g ngrok
+  npm i -g azure-functions-core-tools@3 --unsafe-perm true
+  ```
