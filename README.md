@@ -118,4 +118,10 @@ omf install bobthefish
 * Install `Hack` as part of https://github.com/powerline/fonts
 * Install `AppImageLauncher` rpm https://github.com/TheAssassin/AppImageLauncher/releases/
 * Change from Wayland to X11 https://docs.fedoraproject.org/en-US/quick-docs/configuring-xorg-as-default-gnome-session/
-* Enable TearFree in X11?
+* Enable TearFree in X11
+  ```
+  sudo dnf -y install xrandr
+  xrandr --output DisplayPort-2 --set TearFree on
+  xrandr --output DisplayPort-3 --set TearFree on
+  xrandr --output DisplayPort-4 --set TearFree on
+  ```
