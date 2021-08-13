@@ -117,3 +117,5 @@ omf install bobthefish
 # Misc
 * Install `Hack` as part of https://github.com/powerline/fonts
 * Install `AppImageLauncher` rpm https://github.com/TheAssassin/AppImageLauncher/releases/
+* Change from Wayland to X11 https://docs.fedoraproject.org/en-US/quick-docs/configuring-xorg-as-default-gnome-session/
+* Enable TearFree in X11?
