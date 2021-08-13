@@ -125,3 +125,8 @@ omf install bobthefish
   xrandr --output DisplayPort-3 --set TearFree on
   xrandr --output DisplayPort-4 --set TearFree on
   ```
+* Install NVM
+  ```
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+  ```
+
