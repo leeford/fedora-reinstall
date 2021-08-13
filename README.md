@@ -103,6 +103,7 @@ mkdir -p /home/$USER/.local/bin
 set -Ua fish_user_paths /home/$USER/.local/bin
 curl -L https://get.oh-my.fish | fish
 omf install bobthefish
+omf install nvm
 ```
 
 # Borg Backup
@@ -125,8 +126,3 @@ omf install bobthefish
   xrandr --output DisplayPort-3 --set TearFree on
   xrandr --output DisplayPort-4 --set TearFree on
   ```
-* Install NVM
-  ```
-  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
-  ```
-
