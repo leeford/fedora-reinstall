@@ -130,6 +130,7 @@ omf install nvm
   ```
   sudo ./install.sh
   ```
+  Add printer
 
 # Dev
 ```
