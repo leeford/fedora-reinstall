@@ -110,7 +110,7 @@ omf install nvm
 1. Open Vorta
 2. Import the `borgbase.json` profile from this repo which includes the repo config
 3. Either generate a new key pair and add to repo in borgbase or use existing (see 1password)
-  > If it errors after this, try SSH to `xxxxx@yyyyy.repo.borgbase.com` and try again
+   > If it errors after this, try SSH to `xxxxx@yyyyy.repo.borgbase.com` and try again
 4. Mount the backups and restore what you need
 5. Create a new repository for the new machine
 6. After a while delete old machine repository
