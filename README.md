@@ -126,8 +126,13 @@ omf install nvm
   xrandr --output DisplayPort-3 --set TearFree on
   xrandr --output DisplayPort-4 --set TearFree on
   ```
-* Install NPM Packages
+* Install printer drivers from https://asia.canon/en/support/0100924010 and extract
   ```
-  npm install -g ngrok
-  npm i -g azure-functions-core-tools@3 --unsafe-perm true
+  sudo ./install.sh
   ```
+
+# Dev
+```
+npm install -g ngrok
+npm i -g azure-functions-core-tools@3 --unsafe-perm true
+```
