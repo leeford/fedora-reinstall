@@ -73,6 +73,7 @@ sudo dnf -y install rpmfusion-free-release-tainted
 sudo dnf -y install dnf-plugins-core
 sudo dnf -y install cabextract xorg-x11-font-utils fontconfig
 sudo dnf -y install vlc
+sudo dnf -y install hugo
 sudo dnf -y install powerline-fonts
 sudo dnf -y groupupdate sound-and-video
 sudo dnf -y install libdvdcss
