@@ -120,13 +120,15 @@ omf install nvm
 * Install `Hack` as part of https://github.com/powerline/fonts
 * Install `AppImageLauncher` rpm https://github.com/TheAssassin/AppImageLauncher/releases/
 * Change from Wayland to X11 https://docs.fedoraproject.org/en-US/quick-docs/configuring-xorg-as-default-gnome-session/
-* Enable TearFree in X11
-  ```
-  sudo dnf -y install xrandr
-  xrandr --output DisplayPort-2 --set TearFree on
-  xrandr --output DisplayPort-3 --set TearFree on
-  xrandr --output DisplayPort-4 --set TearFree on
-  ```
+* Enable TearFree in X11 - create `/etc/X11/xorg.conf.d/20-amd.conf` and put this in it
+   ```
+   # /etc/X11/xorg.conf.d/20-amd.conf
+   Section "Device"
+       Identifier  "AMD"
+       Driver      "amdgpu"
+       Option      "TearFree" "true"
+   EndSection
+   ```
 * Install printer drivers from https://asia.canon/en/support/0100924010 and extract
   ```
   sudo ./install.sh
