@@ -18,17 +18,14 @@ sudo reboot now
 ```
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak install flathub com.spotify.Client -y
-flatpak install com.borgbase.Vorta -y
 flatpak install com.discordapp.Discord -y
 flatpak install com.getpostman.Postman -y
-flatpak install com.leinardi.gst -y
 flatpak install de.haeckerfelix.Shortwave -y
 flatpak install net.cozic.joplin_desktop -y
 flatpak install org.gimp.GIMP -y
 flatpak install org.inkscape.Inkscape -y
 flatpak install org.signal.Signal -y
 flatpak install org.telegram.desktop -y
-flatpak install org.wireshark.Wireshark -y
 flatpak install flathub com.obsproject.Studio -y
 flatpak install flathub org.gnome.Extensions -y
 ```
@@ -60,13 +57,8 @@ sudo dnf -y install code
 sudo dnf -y install azure-cli
 sudo dnf -y install gh
 sudo dnf -y install 1password
-sudo dnf -y install insync
 sudo dnf -y install microsoft-edge-dev
-sudo dnf -y install steam
 sudo dnf -y install powershell
-sudo dnf -y install goverlay
-sudo dnf -y install mangohud
-sudo dnf -y install gamemode
 sudo dnf -y install fish util-linux-user
 sudo dnf -y install gnome-shell-extension-appindicator
 sudo dnf -y install rpmfusion-free-release-tainted
