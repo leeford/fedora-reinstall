@@ -28,46 +28,22 @@ flatpak install flathub com.github.tchx84.Flatseal -y
 flatpak install flathub net.davidotek.pupgui2 -y
 flatpak install org.freedesktop.Platform.VulkanLayer.MangoHud -y
 flatpak install flathub com.valvesoftware.Steam -y
-```
-
-# Configure RPM
-```
+flatpak install flathub org.mozilla.firefox -y
 
 ```
 
-# Packages
+# RPM
 ```
-sudo dnf -y install fontconfig-font-replacements
-sudo dnf -y install gnome-tweaks
-sudo dnf -y install teams
-sudo dnf -y install code
-sudo dnf -y install azure-cli
-sudo dnf -y install gh
-sudo dnf -y install 1password
-sudo dnf -y install microsoft-edge-dev
-sudo dnf -y install powershell
-sudo dnf -y install fish util-linux-user
-sudo dnf -y install gnome-shell-extension-appindicator
-sudo dnf -y install rpmfusion-free-release-tainted
-sudo dnf -y install dnf-plugins-core
-sudo dnf -y install cabextract xorg-x11-font-utils fontconfig
-sudo dnf -y install vlc
-sudo dnf -y install hugo
-sudo dnf -y install powerline-fonts
-sudo dnf -y groupupdate sound-and-video
-sudo dnf -y install libdvdcss
-sudo dnf -y install gstreamer1-plugins-{bad-\*,good-\*,ugly-\*,base} gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel ffmpeg gstreamer-ffmpeg 
-sudo dnf -y install lame\* --exclude=lame-devel
-sudo dnf -y group upgrade --with-optional Multimedia
-sudo dnf -y config-manager --set-enabled fedora-cisco-openh264
-sudo dnf -y install gstreamer1-plugin-openh264 mozilla-openh264
-sudo dnf -y remove gnome-tour
+
+
 ```
+
+# Steam
+Ensure that you pass in Mango Hud enviromental params
 
 # Gnome Extensions
 Install the following extensions:
-
-![image](https://user-images.githubusercontent.com/472320/129206525-a6c3369d-06f8-44ed-afba-5b2d36682934.png)
+* Dash to Dock
 
 # Shell
 Set Fish to default shell and amend PATH to include ~/.local/bin
