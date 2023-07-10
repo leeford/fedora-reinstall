@@ -17,35 +17,22 @@ sudo reboot now
 # Flatpak
 ```
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-flatpak install flathub com.spotify.Client -y
 flatpak install com.discordapp.Discord -y
-flatpak install com.getpostman.Postman -y
 flatpak install de.haeckerfelix.Shortwave -y
 flatpak install net.cozic.joplin_desktop -y
-flatpak install org.gimp.GIMP -y
-flatpak install org.inkscape.Inkscape -y
 flatpak install org.signal.Signal -y
 flatpak install org.telegram.desktop -y
 flatpak install flathub com.obsproject.Studio -y
 flatpak install flathub org.gnome.Extensions -y
+flatpak install flathub com.github.tchx84.Flatseal -y
+flatpak install flathub net.davidotek.pupgui2 -y
+flatpak install org.freedesktop.Platform.VulkanLayer.MangoHud -y
+flatpak install flathub com.valvesoftware.Steam -y
 ```
 
 # Configure RPM
 ```
-echo 'fastestmirror=1' | sudo tee -a /etc/dnf/dnf.conf
-echo 'max_parallel_downloads=10' | sudo tee -a /etc/dnf/dnf.conf
-echo 'deltarpm=true' | sudo tee -a /etc/dnf/dnf.conf
-sudo dnf copr enable dawid/better_fonts -y
-sudo dnf -y install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-sudo sh -c 'echo -e "[teams]\nname=teams\nbaseurl=https://packages.microsoft.com/yumrepos/ms-teams\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/teams.repo'
-sudo sh -c 'echo -e "[vscode]\nname=vscode\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
-sudo sh -c 'echo -e "[azure-cli]\nname=azure-cli\nbaseurl=https://packages.microsoft.com/yumrepos/azure-cli\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/azure-cli.repo'
-sudo sh -c 'echo -e "[1password]\nname=1password\nbaseurl=https://downloads.1password.com/linux/rpm/beta/\$basearch\nenabled=1\ngpgcheck=1\ngpgkey=https://downloads.1password.com/linux/keys/1password.asc" > /etc/yum.repos.d/1password.repo'
-sudo sh -c 'echo -e "[gh-cli]\nname=gh-cli\nbaseurl=https://cli.github.com/packages/rpm\nenabled=1\ngpgcheck=1\ngpgkey=http://keyserver.ubuntu.com/pks/lookup?op=get&search=0xc99b11deb97541f0" > /etc/yum.repos.d/gh-cli.repo'
-sudo sh -c 'echo -e "[insync]\nname=insync\nbaseurl=http://yum.insync.io/fedora/\$releasever/\nenabled=1\ngpgcheck=1\ngpgkey=https://d2t3ff60b2tol4.cloudfront.net/repomd.xml.key" > /etc/yum.repos.d/insync.repo'
-sudo sh -c 'echo -e "[microsoft-edge-dev]\nname=azure-cli\nbaseurl=https://packages.microsoft.com/yumrepos/edge/\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/microsoft-edge-dev.repo'
-sudo sh -c 'echo -e "[packages-microsoft-com-prod]\nname=packages-microsoft-com-prod\nbaseurl=https://packages.microsoft.com/rhel/8/prod/\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/microsoft-rhel8.repo'
+
 ```
 
 # Packages
@@ -82,12 +69,6 @@ Install the following extensions:
 
 ![image](https://user-images.githubusercontent.com/472320/129206525-a6c3369d-06f8-44ed-afba-5b2d36682934.png)
 
-# Theming
-```
-wget -qO- https://git.io/papirus-icon-theme-install | DESTDIR="$HOME/.icons" sh
-sudo rpm -i https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm
-```
-
 # Shell
 Set Fish to default shell and amend PATH to include ~/.local/bin
 ```
@@ -99,36 +80,10 @@ omf install bobthefish
 omf install nvm
 ```
 
-# Borg Backup
-1. Open Vorta
-2. Import the `borgbase.json` profile from this repo which includes the repo config
-3. Either generate a new key pair and add to repo in borgbase or use existing (see 1password)
-   > If it errors after this, try SSH to `xxxxx@yyyyy.repo.borgbase.com` and try again
-4. Mount the backups and restore what you need
-5. Create a new repository for the new machine
-6. After a while delete old machine repository
-
 # Misc
 * Install `Hack` as part of https://github.com/powerline/fonts
-* Install `AppImageLauncher` rpm https://github.com/TheAssassin/AppImageLauncher/releases/
-* Change from Wayland to X11 https://docs.fedoraproject.org/en-US/quick-docs/configuring-xorg-as-default-gnome-session/
-* Enable TearFree in X11 - create `/etc/X11/xorg.conf.d/20-amd.conf` and put this in it
-   ```
-   # /etc/X11/xorg.conf.d/20-amd.conf
-   Section "Device"
-       Identifier  "AMD"
-       Driver      "amdgpu"
-       Option      "TearFree" "true"
-   EndSection
-   ```
 * Install printer drivers from https://asia.canon/en/support/0100924010 and extract
   ```
   sudo ./install.sh
   ```
   Add printer
-
-# Dev
-```
-npm install -g ngrok
-npm i -g azure-functions-core-tools@3 --unsafe-perm true
-```
