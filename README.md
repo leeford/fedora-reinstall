@@ -45,6 +45,11 @@ flatpak install org.freedesktop.Platform.VulkanLayer.MangoHud -y
 flatpak install flathub com.valvesoftware.Steam -y
 ```
 
+## Devices
+To add support for some devices like controllers, install `steam-devices`
+```
+sudo dnf install steam-devices
+```
 
 # Shell
 Set Fish to default shell and amend PATH to include ~/.local/bin
