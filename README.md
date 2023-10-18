@@ -39,11 +39,7 @@ flatpak install flathub org.mozilla.firefox -y
 ```
 
 # Steam
-Ensure that you pass in Mango Hud enviromental params
 
-# Gnome Extensions
-Install the following extensions:
-* Dash to Dock
 
 # Shell
 Set Fish to default shell and amend PATH to include ~/.local/bin
@@ -55,11 +51,3 @@ curl -L https://get.oh-my.fish | fish
 omf install bobthefish
 omf install nvm
 ```
-
-# Misc
-* Install `Hack` as part of https://github.com/powerline/fonts
-* Install printer drivers from https://asia.canon/en/support/0100924010 and extract
-  ```
-  sudo ./install.sh
-  ```
-  Add printer
