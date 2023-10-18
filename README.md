@@ -34,8 +34,12 @@ flatpak install flathub org.mozilla.firefox -y
 
 # RPM
 ```
-
-
+echo 'fastestmirror=1' | sudo tee -a /etc/dnf/dnf.conf
+echo 'max_parallel_downloads=10' | sudo tee -a /etc/dnf/dnf.conf
+echo 'deltarpm=true' | sudo tee -a /etc/dnf/dnf.conf
+sudo dnf copr enable dawid/better_fonts -y
+sudo dnf -y install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 ```
 
 # Steam
