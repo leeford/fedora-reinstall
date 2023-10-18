@@ -23,13 +23,8 @@ flatpak install net.cozic.joplin_desktop -y
 flatpak install org.signal.Signal -y
 flatpak install org.telegram.desktop -y
 flatpak install flathub com.obsproject.Studio -y
-flatpak install flathub org.gnome.Extensions -y
 flatpak install flathub com.github.tchx84.Flatseal -y
 flatpak install flathub net.davidotek.pupgui2 -y
-flatpak install org.freedesktop.Platform.VulkanLayer.MangoHud -y
-flatpak install flathub com.valvesoftware.Steam -y
-flatpak install flathub org.mozilla.firefox -y
-
 ```
 
 # RPM
@@ -43,6 +38,13 @@ sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 ```
 
 # Steam
+
+## Flatpak build
+Run the following to install Steam and MangoHud using flatpak
+```
+flatpak install org.freedesktop.Platform.VulkanLayer.MangoHud -y
+flatpak install flathub com.valvesoftware.Steam -y
+```
 
 
 # Shell
